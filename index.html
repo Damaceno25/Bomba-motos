@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomba Motos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      
+           <img src="assets/Logo.png" alt="Logo Bomba Motos" class="logo">
+       
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="#">Consultas</a></li>
+                <li><a href="#">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bem-vindo à Bomba Motos</h2>
+        <p>Gerencie sua oficina com eficiência e organização.</p>
+
+        <section id="cadastro">
+            <h2>Cadastro de Serviços</h2>
+            <form id="formCadastro">
+                <label for="modelo">Modelo da Moto:</label>
+                <input type="text" id="modelo" required>
+        
+                <label for="servico">Serviço Prestado:</label>
+                <input type="text" id="servico" required>
+        
+                <label for="dataEntrada">Data de Entrada:</label>
+                <input type="date" id="dataEntrada" required>
+        
+                <label for="dataSaida">Data de Saída:</label>
+                <input type="date" id="dataSaida">
+        
+                <label for="valor">Valor do Serviço (R$):</label>
+                <input type="number" id="valor" required>
+        
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+        <section id="consulta">
+            <h2>Serviços Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Serviço</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                        <th>Valor (R$)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaServicos">
+                    <!-- Os serviços cadastrados aparecerão aqui -->
+                </tbody>
+            </table>
+            <div id="filtros">
+                <input type="text" id="filtroModelo" placeholder="Filtrar por modelo">
+                <input type="text" id="filtroServico" placeholder="Filtrar por serviço">
+                <input type="date" id="filtroData">
+                <button onclick="filtrarServicos()">Buscar</button>
+                <button onclick="limparFiltros()">Limpar</button>
+            </div>
+            
+        </section>
+        <section id="resumo">
+            <h2>Resumo Financeiro</h2>
+            <div id="resumoDados">
+                <p>Total Arrecadado: <span id="totalArrecadado">R$ 0,00</span></p>
+                <p>Total de Motos Atendidas: <span id="totalMotos">0</span></p>
+                <p>Total de Serviços Prestados: <span id="totalServicos">0</span></p>
+                <p>Arrecadação Diária: <span id="arrecadacaoDiaria">R$ 0,00</span></p>
+                <p>Arrecadação Semanal: <span id="arrecadacaoSemanal">R$ 0,00</span></p>
+                <p>Arrecadação Mensal: <span id="arrecadacaoMensal">R$ 0,00</span></p>
+            </div>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Bomba Motos. Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
