@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="shortcut icon" href="../assets/Logo.png" />
-    <link rel="stylesheet" href="index.css" />
+    <title>Consulta</title>
+    <link rel="shortcut icon" href="assets/Logomarca.png" />
+    <link rel="stylesheet" href="consulta.css" />
     <link rel="stylesheet" href="Navbar/navbar.css" />
   </head>
   <body>
@@ -18,8 +18,8 @@
         <nav>
           <ul class="top-menu">
             <li><a href="#">Suporte</a></li>
-            <li><a href="servico.html">Entrar</a></li>
-            <li><a href="consulta.html">Registrar</a></li>
+            <li><a href="Acesso/login.html">Entrar</a></li>
+            <li><a href="Acesso/register.html">Registrar</a></li>
           </ul>
         </nav>
       </div>
@@ -45,7 +45,36 @@
         </nav>
       </div>
     </header>
+    <main>
+      <h1>Consulta Geral</h1>
 
-    <script src="cadastro.js"></script>
+      <section>
+        <h2>Clientes</h2>
+        <input
+          type="text"
+          id="filtroCliente"
+          placeholder="Filtrar por nome..." />
+        <ul id="listaClientes"></ul>
+      </section>
+
+      <section>
+        <h2>Veículos</h2>
+        <input
+          type="text"
+          id="filtroVeiculo"
+          placeholder="Filtrar por placa ou modelo..." />
+        <ul id="listaVeiculos"></ul>
+      </section>
+
+      <section>
+        <h2>Serviços</h2>
+        <input
+          type="text"
+          id="filtroServico"
+          placeholder="Filtrar por data (AAAA-MM-DD)..." />
+        <ul id="listaServicos"></ul>
+      </section>
+    </main>
+    <script src="consulta.js"></script>
   </body>
 </html>
