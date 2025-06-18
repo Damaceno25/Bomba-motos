@@ -1,49 +1,62 @@
-<!-- navbar.html -->
-<!--<div class="top-bar">
-  <a href="index.html">
-    <img src="assets/Logomarca.png" alt="Logo Bomba Motos" class="logo" />
-  </a>
-  
-  <div class="dropdown">
-    <button class="dropbtn">👤 Damaceno ▾</button>
-    <div class="dropdown-content">
-      <a href="#">Perfil</a>
-      <a href="#">Configurações</a>
-      <a href="#">Sair</a>
-    </div>
-  </div>-->
-
-
+<header>
   <div class="top-bar">
     <a href="index.html">
       <img src="assets/Logomarca.png" alt="Logo Bomba Motos" class="logo" />
     </a>
     <nav>
       <ul class="top-menu">
-            <li><a href="#">Suporte</a></li>
-            <li><a href="Acesso/login.html">Entrar</a></li>
-            <li><a href="Acesso/register.html">Registrar</a></li>
-          </ul>
+        <!-- Container do botão de usuário com dropdown -->
+        <li id="user-dropdown" style="display: none;">
+          <div class="user-menu">
+            <!-- Botão clicável que mostra o nome do usuário e seta ▼ -->
+            <button id="user-toggle" class="user-button">
+              <span id="usuario-logado">Olá, Usuário</span>
+              <span class="hamburguer-icon">&#x25BC;</span>
+            </button>
+            <!-- Menu dropdown com opções -->
+            <ul id="dropdown-menu" class="dropdown hidden">
+              <li><a href="#">Perfil</a></li>
+              <li><a href="" id="logout-link">Sair</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Se não estiver logado, mostra essas opções -->
+        <li id="login-link"><a href="../Acesso/login.html">Entrar</a></li>
+        <li id="register-link"><a href="../Acesso/register.html">Registrar</a></li>
+      </ul>
     </nav>
   </div>
-</div>
 
-<div class="header-container">
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="servico.html">Serviços</a></li>
-      <li class="has-submenu">
-        <a href="javascript:void(0)" onclick="toggleSubmenu()"
-          >Cadastro &#x25BC;</a
-        >
-        <ul class="submenu" id="has-submenu">
-          <li><a href="Cadastros/cad-cliente.html">Clientes</a></li>
-          <li><a href="Cadastros/cad-veiculo.html">Veículos</a></li>
-        </ul>
-      </li>
-      <li><a href="consulta.html">Consultas</a></li>
-      <li><a href="relatorio.html">Relatórios</a></li>
-    </ul>
-  </nav>
-</div>
+  <div class="header-container">
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../servico.html">Serviços</a></li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" onclick="toggleSubmenu('cadastro-submenu')">
+            Cadastro &#x25BC;
+          </a>
+          <ul class="submenu" id="cadastro-submenu">
+            <li><a href="../Cadastros/cad-cliente.html">Clientes</a></li>
+            <li><a href="../Cadastros/cad-veiculo.html">Veículos</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" onclick="toggleSubmenu('consulta-submenu')">
+            Consultas &#x25BC;
+          </a>
+          <ul class="submenu" id="consulta-submenu">
+            <li><a href="../Consultas/consul-cliente.html">Clientes</a></li>
+            <li><a href="../Consultas/consul-veiculo.html">Veículos</a></li>
+            <li><a href="../Consultas/consul-servico.html">Serviços</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../relatorio.html">Relatórios</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

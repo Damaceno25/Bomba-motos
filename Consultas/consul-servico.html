@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta Clientes</title>
+  <link rel="stylesheet" href="consul-cliente.css" />
+  <link rel="stylesheet" href="../Navbar/navbar.css">
+</head>
+<body>
+  <header>
+      <!-- TOPO COM SUPORTE / ENTRAR / REGISTRAR -->
+      <div class="top-bar">
+        <a href="../index.html">
+          <img src="../assets/Logomarca.png" alt="Logo Bomba Motos" class="logo" />
+        </a>
+        <nav>
+          <ul class="top-menu">
+            <li><a href="#">Suporte</a></li>
+            <li><a href="Acesso/login.html">Entrar</a></li>
+            <li><a href="Acesso/register.html">Registrar</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-container">
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../servico.html">Serviços</a></li>
+            <li class="has-submenu">
+              <a href="javascript:void(0)" onclick="toggleSubmenu()"
+                >Cadastro &#x25BC;</a
+              >
+              <ul class="submenu" id="has-submenu">
+                <li><a href="../Cadastros/cad-cliente.html">Clientes</a></li>
+                <li><a href="../Cadastros/cad-veiculo.html">Veículos</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+          <a href="javascript:void(0)" onclick="toggleSubmenu('consulta-submenu')">
+            Consultas &#x25BC;
+          </a>
+          <ul class="submenu" id="consulta-submenu">
+            <li><a href="consul-cliente.html">Clientes</a></li>
+            <li><a href="consul-veiculo.html">Veículos</a></li>
+            <li><a href="consul-servico.html">Serviços</a></li>
+          </ul>
+        </li>
+
+            <li><a href="../relatorio.html">Relatórios</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="titulo-pagina">Consulta de Serviços</h1>
+      <div class="container-box">
+        <section>
+          <h2 class="titulo-secao">Serviços</h2>
+          <input type="text" id="filtroServico" class="filtro-input" placeholder="Filtrar Por serviços..." />
+          <ul id="listaServicos" class="lista-resultado"></ul>
+        </section>
+      </div>
+    </main>
+  <script src="consul-cliente.js"></script>
+  <script src="../Navbar/navbar.js"></script>
+</body>
+</html>

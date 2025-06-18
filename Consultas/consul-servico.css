@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: repeating-linear-gradient(0deg, #3a3a3a, #3a3a3a 1px, #4a4a4a 2px),
+    radial-gradient(circle at top left, #5a5a5a, #2a2a2a);
+  background-blend-mode: overlay;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+.titulo-pagina {
+  text-align: center;
+  color: red;
+  margin-bottom: 30px;
+}
+
+.container-box {
+  background-color: #0d0d0d;
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.titulo-secao {
+  color: red;
+  font-size: 22px;
+  border-bottom: 2px solid red;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.filtro-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.lista-resultado {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-resultado li {
+  background-color: #111;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  border-left: 4px solid red;
+  border-radius: 10px;
+}
+
+
+/* Scrollbar padrão para Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 10px; /* largura da barra lateral */
+}
+
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* preto/cinza escuro */
+}
+
+/* Parte que se move */
+::-webkit-scrollbar-thumb {
+  background-color: #e60000; /* vermelho vibrante */
+  border-radius: 8px;
+  border: 2px solid #1e1e1e; /* borda para dar um destaque */
+}
+
+/* Ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff1a1a; /* vermelho um pouco mais claro */
+}
